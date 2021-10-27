@@ -139,7 +139,7 @@ $(".list-group").on("blur", "input[type='text']", function() {
 
   // recreate span element with bootstrap classes
   var taskSpan = $("<span>")
-    ,addClass("badge badge-primary badge-pill")
+    .addClass("badge badge-primary badge-pill")
     .text(date);
 
   // replace input with span element
