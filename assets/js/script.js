@@ -172,6 +172,22 @@ $(".card .list-group").sortable({
   },
 });
 
+// adds drop feature over trash area
+$("#trash").droppable({
+  accept: ".card .list-group-item",
+  tolerance: "touch",
+  drop: function (event, ui) {
+    ui.draggable.remove();
+    console.log("drop");
+  },
+  over: function (event, ui) {
+    console.log("over");
+  },
+  out: function (event, ui) {
+    console.log("out");
+  },
+});
+
 // value of due date was changed
 $(".list-group").on("blur", "input[type='text']", function () {
   var date = $(this).val();
